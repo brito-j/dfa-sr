@@ -1,16 +1,18 @@
 <!-- Jason Brito -->
-<!-- 9.16.2018 -->
+<!-- 9.20.2018 -->
 
 <div class="page">
   <h1>Step 3: Categorize</h1>
+  <!-- use form to process submission -->
   <form clrForm>
     &nbsp;
     &nbsp;
+    <!-- optional input to search categories -->
     <input clrInput name="search" type="text" [(ngModel)]="search">
   </form>
-</div>
-<div class="page">
+  <!-- arrange cards in column for responsive design -->
   <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">
+    <!-- click card to select category and filter categories based on search input -->
     <div class="card clickable" id="{{category}}" (click)="select(category)" *ngFor="let category of filter()">
       <div class="card-header">{{category}}</div>
     </div>
