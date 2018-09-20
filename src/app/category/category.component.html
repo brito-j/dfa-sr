@@ -2,14 +2,17 @@
 <!-- 9.16.2018 -->
 
 <div class="page">
-  <!--<h1>Step 3: Categorize</h1>-->
+  <h1>Step 3: Categorize</h1>
   <form clrForm>
+    &nbsp;
+    &nbsp;
     <input clrInput name="search" type="text" [(ngModel)]="search">
   </form>
-  <br>
-  <ul class="list-unstyled">
-    <li *ngFor="let category of filter()"><span [innerHTML]="bold(category)"></span></li>
-  </ul>
 </div>
-
-
+<div class="page">
+  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">
+    <div class="card clickable" id="{{category}}" (click)="select(category)" *ngFor="let category of filter()">
+      <div class="card-header">{{category}}</div>
+    </div>
+  </div>
+</div>
