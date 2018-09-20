@@ -1,0 +1,15 @@
+<!-- Jason Brito -->
+<!-- 9.16.2018 -->
+
+<div class="page">
+  <!--<h1>Step 3: Categorize</h1>-->
+  <form clrForm>
+    <input clrInput name="search" type="text" [(ngModel)]="search">
+  </form>
+  <br>
+  <ul class="list-unstyled">
+    <li *ngFor="let category of filter()"><span [innerHTML]="bold(category)"></span></li>
+  </ul>
+</div>
+
+
