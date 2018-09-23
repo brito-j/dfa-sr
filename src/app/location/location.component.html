@@ -1,0 +1,18 @@
+<div class="page">
+  <clr-dropdown [clrCloseMenuOnItemClick]="true">
+    <label>Locations</label>
+    <br>
+
+    <button type="button" clrDropdownTrigger>
+      <input clrInput placeholder="Enter your location." [(ngModel)]="search" />
+    </button>
+
+    <clr-dropdown-menu *clrIfOpen>
+      <div *ngFor="let location of filter()">
+        <button type="button" clrDropdownItem (click)="onClick(location)">
+          <span [innerHTML]="bold(location)"></span>
+        </button>
+      </div>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+</div>
