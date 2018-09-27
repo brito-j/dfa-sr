@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
+import { LocationComponent } from './location/location.component';
 import { AppComponent } from './app.component';
 import { UploadComponent } from './upload/upload.component';
 import { ClarityModule } from '@clr/angular';
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
+    LocationComponent,
     UploadComponent,
     CategoryComponent
   ],
