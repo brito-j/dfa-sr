@@ -1,20 +1,23 @@
 <!-- Jason Brito -->
-<!-- 9.20.2018 -->
+<!-- 9.28.2018 -->
 
 <div class="page">
   <h1>Step 3: Categorize</h1>
-  <!-- use form to process submission -->
-  <form clrForm>
-    &nbsp;
-    &nbsp;
-    <!-- optional input to search categories -->
-    <input clrInput name="search" type="text" [(ngModel)]="search">
-  </form>
-  <!-- arrange cards in column for responsive design -->
-  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">
-    <!-- click card to select category and filter categories based on search input -->
-    <div class="card clickable" id="{{category}}" (click)="select(category)" *ngFor="let category of filter()">
-      <div class="card-header">{{category}}</div>
-    </div>
-  </div>
+
+  <!-- category selection dropdown -->
+  <clr-dropdown>
+    <!-- button label changes to selected category or defaults to 'Category' -->
+    <button clrDropdownTrigger class="btn btn-secondary btn-sm">{{setSelection()}}
+      <clr-icon shape="caret down" *ngIf="!selection.length"></clr-icon> </button>
+
+    <!-- filter dropdown options based on input search -->
+    <clr-dropdown-menu *clrIfOpen>
+      <input class="input" type="text" placeholder="Category..." [(ngModel)]="search" />
+      <div class="dropdown-divider"></div>
+      <button *ngFor="let category of filter()" clrDropdownItem (click)="selection=category">
+        <span [innerHTML]="bold(category)"></span>
+      </button>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+
 </div>
