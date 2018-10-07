@@ -1,11 +1,13 @@
+<!--
+Lays out a search box that accepts input and filters through a list of Vanderbilt
+locations. The list drops down when the search box is clicked.
+-->
 <div class="page">
   <h1>Step 2: Locate</h1>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
-    <br>
-
-    <button type="button" clrDropdownTrigger>
+    <label clrDropdownTrigger>
       <input clrInput placeholder="Enter your location." [(ngModel)]="search" />
-    </button>
+    </label>
 
     <clr-dropdown-menu *clrIfOpen>
       <div *ngFor="let location of filter()">
