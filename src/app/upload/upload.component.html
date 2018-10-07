@@ -8,10 +8,8 @@
     <!-- hide container if no image is selected -->
     <!-- set image source to data url -->
     <div *ngIf="getURL().length"><img [src]="getURL()" height="200"></div>
-    <br>
+    <div *ngIf="getURL().length"><br></div>
     <!-- process upload each time a new image is selected -->
     <input clrInput type='file' (change)="upload($event)">
   </form>
-  <!-- route to next component -->
-  <button class="btn btn-primary">next</button>
 </div>
