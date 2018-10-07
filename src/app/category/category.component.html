@@ -1,7 +1,8 @@
 <!-- Jason Brito -->
-<!-- 9.20.2018 -->
+<!-- 9.28.2018 -->
 
 <div class="page">
+<<<<<<< HEAD
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
       <input clrInput placeholder="Enter your category." [(ngModel)]="search" />
@@ -15,4 +16,24 @@
       </div>
     </clr-dropdown-menu>
   </clr-dropdown>
+=======
+  <h1>Step 3: Categorize</h1>
+
+  <!-- category selection dropdown -->
+  <clr-dropdown>
+    <!-- button label changes to selected category or defaults to 'Category' -->
+    <button clrDropdownTrigger class="btn btn-secondary btn-sm">{{setSelection()}}
+      <clr-icon shape="caret down" *ngIf="!selection.length"></clr-icon> </button>
+
+    <!-- filter dropdown options based on input search -->
+    <clr-dropdown-menu *clrIfOpen>
+      <input class="input" type="text" placeholder="Category..." [(ngModel)]="search" />
+      <div class="dropdown-divider"></div>
+      <button *ngFor="let category of filter()" clrDropdownItem (click)="selection=category">
+        <span [innerHTML]="bold(category)"></span>
+      </button>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+
+>>>>>>> 83911b2b3d530ad5e5cd51cdae782afd294aeda3
 </div>
