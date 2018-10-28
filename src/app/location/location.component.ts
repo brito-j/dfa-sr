@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
   // Location list of Vanderbilt buildings
-  locations = [
+  buildings = [
     'Alpha Chi Omega',
     'Alpha Delta Pi',
     'Alpha Epsilon Pi',
@@ -73,15 +73,22 @@ export class LocationComponent implements OnInit {
     'Zeta Tau Alpha'
   ];
 
+  // For building search
   search = '';
+
+  // For floor select
+  floors = '';
+
+  // For room select
+  rooms = '';
 
   constructor() {}
 
   ngOnInit() {}
 
   // Filter function that matches letters within search to provided options
-  filter() {
-    return this.locations.filter(c => c.toLowerCase().includes(this.search.toLowerCase()));
+  filter(list) {
+    return list.filter(c => c.toLowerCase().includes(this.search.toLowerCase()));
   }
 
   // Function that bolds matching letters

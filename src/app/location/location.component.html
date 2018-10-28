@@ -6,15 +6,44 @@ locations. The list drops down when the search box is clicked.
   <h1>Step 2: Locate</h1>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
-      <input clrInput placeholder="Enter your location." [(ngModel)]="search" />
+      <input clrInput placeholder="Enter your building." [(ngModel)]="search" />
     </label>
 
     <clr-dropdown-menu *clrIfOpen>
-      <div *ngFor="let location of filter()">
-        <button type="button" clrDropdownItem (click)="onClick(location)">
-          <span [innerHTML]="bold(location)"></span>
+      <div *ngFor="let building of filter(buildings)">
+        <button type="button" clrDropdownItem (click)="onClick(building)">
+          <span [innerHTML]="bold(building)"></span>
         </button>
       </div>
     </clr-dropdown-menu>
   </clr-dropdown>
+
+  &nbsp;
+
+  <clr-select-container>
+    <label>Floor</label>
+    &nbsp;
+    <select clrSelect [(ngModel)]="floors">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </clr-select-container>
+
+  &nbsp;
+  &nbsp;
+
+  <clr-select-container>
+    <label>Room</label>
+    &nbsp;
+    <select clrSelect [(ngModel)]="rooms">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </clr-select-container>
 </div>
