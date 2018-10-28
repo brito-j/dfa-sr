@@ -1,5 +1,5 @@
 // Jason Brito
-// 9.28.2018
+// 10.28.2018
 // The purpose of this component is to handle the category selection.
 
 import {Component, OnInit} from '@angular/core';
@@ -17,32 +17,56 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
   }
 
-  //all possible categories
-  categories = [
-    'Common Area',
-    'Doors/Windows/Blinds/Walls',
-    'Elevators',
-    'Furniture/Appliances',
-    'Heat/Air',
-    'Housekeeping',
-    'Lights/Electrical',
-    'Other',
-    'Pests',
-    'Plumbing/Water'
+  //problem codes
+  codes = [
+    'Accessibility',
+    'Biowaste',
+    'Carpentry',
+    'Carp-Special',
+    'COG',
+    'Controls',
+    'CPS Support',
+    'Cust-Call Back',
+    'Cust-Special',
+    'Custodial',
+    'CWD',
+    'Electrical',
+    'Elevator',
+    'Event',
+    'Fire Life Safe',
+    'Fire Marshall',
+    'Grounds',
+    'Grounds-Special',
+    'HVAC',
+    'HVAC-Spec_Eqpt',
+    'Interofficemove',
+    'Key/Sign',
+    'Paint',
+    'Paint-Special',
+    'Pest Control',
+    'Plumbing',
+    'Projects',
+    'Recycling',
+    'Space',
+    'Surplus',
+    'Systems'
   ];
 
-  //search input
+  //problem code
   search = '';
 
-  //filters categories based on search input
+  //description
+  description = '';
+
+  //filters problem codes based on search
   filter() {
-    return this.categories.filter(c => c.toLowerCase().includes(this.search.toLowerCase()));
+    return this.codes.filter(c => c.toLowerCase().includes(this.search.toLowerCase()));
   }
 
-  // Function that bolds matching letters
+  //bolds matching letters
   bold(c) { return c.replace(new RegExp(this.search, 'gi'), '<b>' + '$&' + '</b>'); }
 
-  // Function to obtain location option from click
-  onClick(location) { return this.search = location; }
+  //sets category on click
+  onClick(category) { return this.search = category; }
 
 }

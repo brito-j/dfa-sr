@@ -1,11 +1,11 @@
 <!-- Jason Brito -->
-<!-- 9.28.2018 -->
+<!-- 10.28.2018 -->
 
 <div class="page">
-  <h1>Step 3: Categorize</h1>
+  <h5>Problem Code</h5>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
-      <input clrInput placeholder="Enter your category." [(ngModel)]="search" />
+      <input clrInput [(ngModel)]="search" />
     </label>
 
     <clr-dropdown-menu *clrIfOpen>
@@ -16,4 +16,9 @@
       </div>
     </clr-dropdown-menu>
   </clr-dropdown>
+
+  <h5>Description</h5>
+  <div class="clr-control-container">
+    <textarea clrTextarea title="description" [(ngModel)]="description"></textarea>
+  </div>
 </div>
