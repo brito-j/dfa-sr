@@ -1,6 +1,6 @@
-# dfa-sr
+# SnapReport
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+This project aims to bring a new interface to Vanderbilt University's Plant Operations maintenance request form, making it easier to submit and analyze requests as well as adding in an image upload component. This project is also part of Design for America (DFA) and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
 
