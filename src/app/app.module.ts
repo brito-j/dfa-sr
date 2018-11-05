@@ -8,13 +8,15 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
+import { InformationComponent } from './information/information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationComponent,
     UploadComponent,
-    CategoryComponent
+    CategoryComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
