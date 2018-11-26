@@ -1,15 +1,11 @@
-/* Jason Brito */
-/* 9.28.2018 */
-
-/* pad left */
-.page
-{
-  padding-left: 1%;
-}
-
 /* center and shorten input field length */
 .input
 {
   margin: auto;
   width: 75%;
+}
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
 }

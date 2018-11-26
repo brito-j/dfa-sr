@@ -1,3 +1,9 @@
-.page {
-  padding-left: 1%;
+.page
+{
+  text-align: center;
+}
+
+.page-content
+{
+  display: inline-block;
 }
