@@ -2,3 +2,8 @@
   max-height: 200px;
   overflow-y: auto;
 }
+
+.textarea
+{
+  background: #F2F2F2;
+}
