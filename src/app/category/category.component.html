@@ -3,10 +3,11 @@
 
 <div class="page">
   <h1>Categorize</h1>
+  <br>
+  <h5>Problem Code</h5>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
-      <h5>Problem Code</h5>
-      <input clrInput type="text" [(ngModel)]="search" />
+      <input clrInput class="input" type="text" [(ngModel)]="search" />
     </label>
 
     <clr-dropdown-menu *clrIfOpen>
@@ -18,15 +19,10 @@
     </clr-dropdown-menu>
   </clr-dropdown>
 
-  <div role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Description...</span>
-  </div>
-
   <form clrForm *ngIf="search == 'Event'">
     <div *ngIf="getURL().length"><img [src]="getURL()" height="200"></div>
     <div *ngIf="getURL().length"><br></div>
-    <input clrInput type='file' (change)="upload($event)">
+    <input clrInput class="input" type='file' (change)="upload($event)">
   </form>
 
   <h5>Description</h5>

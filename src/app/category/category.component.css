@@ -1,11 +1,4 @@
-/* center and shorten input field length */
-.input
-{
-  margin: auto;
-  width: 75%;
-}
-
 .dropdown-menu {
-  max-height: 300px;
+  max-height: 200px;
   overflow-y: auto;
 }
