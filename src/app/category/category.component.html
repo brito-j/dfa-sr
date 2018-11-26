@@ -3,8 +3,8 @@
 
 <div class="page">
   <h1>Categorize</h1>
+  <label>Problem Code</label>
   <br>
-  <h5>Problem Code</h5>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
       <input clrInput class="input" type="text" [(ngModel)]="search" />
@@ -25,8 +25,11 @@
     <input clrInput class="input" type='file' (change)="upload($event)">
   </form>
 
-  <h5>Description</h5>
+  <br>
+  <br>
   <div class="clr-control-container">
+    <label>Description</label>
+    <br>
     <textarea clrTextarea title="description" [(ngModel)]="description"></textarea>
   </div>
 </div>
