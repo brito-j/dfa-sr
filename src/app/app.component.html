@@ -5,17 +5,21 @@
       <span class="title">SnapReport</span>
     </div>
     <div class="header-nav" [clr-nav-level]="1">
-      <a class="nav-link"><span class="nav-text">Identify</span></a>
-      <a class="nav-link"><span class="nav-text">Locate</span></a>
-      <a class="nav-link"><span class="nav-text">Categorize</span></a>
-      <a class="nav-link"><span class="nav-text">Upload</span></a>
+      <a class="nav-link" href="#identify"><span class="nav-text">Identify</span></a>
+      <a class="nav-link" href="#locate"><span class="nav-text">Locate</span></a>
+      <a class="nav-link" href="#categorize"><span class="nav-text">Categorize</span></a>
+      <a class="nav-link" href="#upload"><span class="nav-text">Upload</span></a>
     </div>
   </clr-header>
   <div class="page">
     <div class="page-content">
+      <a name="identify"></a>
       <app-information></app-information>
+      <a name="locate"></a>
       <app-location></app-location>
+      <a name="categorize"></a>
       <app-category></app-category>
+      <a name="upload"></a>
       <app-upload></app-upload>
     </div>
   </div>
