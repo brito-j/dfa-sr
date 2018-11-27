@@ -1,23 +1,22 @@
-<header class="header-3">
-  <div class="branding">
-    <span class="nav-link"><clr-icon shape="note"></clr-icon></span>
-    <span class="title">SnapReport</span>
+<clr-main-container>
+  <clr-header>
+    <div class="branding">
+      <span class="nav-link"><clr-icon shape="note"></clr-icon></span>
+      <span class="title">SnapReport</span>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1">
+      <a class="nav-link"><span class="nav-text">Identify</span></a>
+      <a class="nav-link"><span class="nav-text">Locate</span></a>
+      <a class="nav-link"><span class="nav-text">Categorize</span></a>
+      <a class="nav-link"><span class="nav-text">Upload</span></a>
+    </div>
+  </clr-header>
+  <div class="page">
+    <div class="page-content">
+      <app-information></app-information>
+      <app-location></app-location>
+      <app-category></app-category>
+      <app-upload></app-upload>
+    </div>
   </div>
-  <div class="header-nav">
-    <a class="nav-link"><span class="nav-text">Identify</span></a>
-    <a class="nav-link"><span class="nav-text">Locate</span></a>
-    <a class="nav-link"><span class="nav-text">Categorize</span></a>
-    <a class="nav-link"><span class="nav-text">Upload</span></a>
-  </div>
-  <div class="header-actions">
-    <a class="nav-link"><span class="nav-text">VUnet ID</span></a>
-  </div>
-</header>
-<div class="page">
-  <div class="page-content">
-    <app-information></app-information>
-    <app-location></app-location>
-    <app-category></app-category>
-    <app-upload></app-upload>
-  </div>
-</div>
+</clr-main-container>

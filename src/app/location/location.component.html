@@ -8,7 +8,7 @@ locations. The list drops down when the search box is clicked.
   <br>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
-      <input clrInput class="input" type="text" placeholder="Enter your building." [(ngModel)]="search" />
+      <input clrInput class="input" type="text" [(ngModel)]="search" />
     </label>
 
     <clr-dropdown-menu *clrIfOpen>
