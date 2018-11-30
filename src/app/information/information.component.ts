@@ -12,4 +12,16 @@ export class InformationComponent implements OnInit {
   ngOnInit() {
   }
 
+  first;
+  last;
+  id;
+  email;
+  phone1;
+  dept;
+  altfirst;
+  altlast;
+  altemail;
+  alternatephone;
+
+
 }
