@@ -5,11 +5,15 @@
   <h1>Categorize</h1>
   <label>Problem Code</label>
   <br>
+  <!--empty div for spacing-->
+  <div></div>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
       <input clrInput class="input" type="text" [(ngModel)]="search" />
     </label>
-
+    <br>
+    <br>
+    <strong>{{pc[search]}}</strong>
     <clr-dropdown-menu *clrIfOpen>
       <div *ngFor="let category of filter()">
         <button type="button" clrDropdownItem (click)="onClick(category)">
@@ -19,10 +23,8 @@
     </clr-dropdown-menu>
   </clr-dropdown>
 
-  <form clrForm *ngIf="search == 'Event'">
-    <div *ngIf="getURL().length"><img [src]="getURL()" height="200"></div>
-    <div *ngIf="getURL().length"><br></div>
-    <input clrInput class="input" type='file' (change)="upload($event)">
+  <form clrForm *ngIf="search == 'EVENT'">
+    <input clrInput class="input" type='file'>
   </form>
 
   <br>
