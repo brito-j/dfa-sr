@@ -1,8 +1,9 @@
-.page {
-  padding-left: 1%;
-}
-
 .dropdown-menu {
   max-height: 300px;
   overflow-y: auto;
+}
+
+.sel
+{
+  background: #F2F2F2;
 }

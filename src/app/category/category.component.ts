@@ -17,56 +17,55 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
   }
 
+  pc: object = {
+    'ACCESSIBILITY' : 'ACCESSIBILITY ISSUES',
+    'BIOWASTE' : 'BIOWASTE PICKUP REQUEST',
+    'CARP-SPECIAL' : 'CARPENTRY SPECIAL REQUEST',
+    'CARPENTRY' : 'CARPENTRY REPAIR',
+    'COG' : 'COGENERATION PLANT REQUEST',
+    'CONTROLS' : 'CONTROLS REQUEST',
+    'CUST-CALL BACK' : 'CUSTODIAL CALL BACK PART OF NORMAL ROUTINES BUT MISSED',
+    'CUST-SPECIAL' : 'CUSTODIAL SPECIAL REQUEST PAID FOR BY CUSTOMER NOT COVERED BY ROUTINES',
+    'CUSTODIAL' : '	CUSTODIAL REQUEST ITEMS NOT IN NORMAL ROUTINE BUT PART OF MAINTENANCE',
+    'CWD' : 'CHILLED WATER GROUP REQUEST',
+    'ELECTRICAL' : 'ELECTRICAL REQUEST',
+    'ELEVATOR' : 'ELEVATOR REQUEST',
+    'EVENT' : 'EVENT REQUEST',
+    'FIRE_LIFE_SAFE' : 'FIRE LIFE SAFETY',
+    'GROUNDS' : 'GROUNDS REPAIR',
+    'GROUNDS-SPECIAL' : 'GROUNDS SPECIAL REQUEST',
+    'HVAC' : 'HVAC REQUEST',
+    'HVAC -SPEC_EQPT' : 'HVAC SPECIAL REQUEST - SPECIAL EQUIPMENT REPAIR',
+    'INTEROFFICEMOVE' : 'INTEROFFICE MOVE',
+    'KEY/SIGN' : 'KEY/SIGN REQUEST',
+    'MOVE' : 'DO NOT USE MOVE REQUEST',
+    'NEWKEY' : 'MAKE NEW KEYS',
+    'PAINT' : 'PAINT CREW REQUEST',
+    'PAINT-SPECIAL' : 'PAINT SPECIAL REQUEST',
+    'PEST CONTROL' : 'PEST CONTROL REQUEST',
+    'PLUMBING' : 'PLUMBING REQUEST',
+    'RECYCLING' : 'RECYCLING REQUEST',
+    'SURPLUS' : 'SURPLUS PICKUP REQUEST'
+  };
+
   //problem codes
-  codes = [
-    'Accessibility',
-    'Biowaste',
-    'Carpentry',
-    'Carp-Special',
-    'COG',
-    'Controls',
-    'CPS Support',
-    'Cust-Call Back',
-    'Cust-Special',
-    'Custodial',
-    'CWD',
-    'Electrical',
-    'Elevator',
-    'Event',
-    'Fire Life Safe',
-    'Fire Marshall',
-    'Grounds',
-    'Grounds-Special',
-    'HVAC',
-    'HVAC-Spec_Eqpt',
-    'Interofficemove',
-    'Key/Sign',
-    'Paint',
-    'Paint-Special',
-    'Pest Control',
-    'Plumbing',
-    'Projects',
-    'Recycling',
-    'Space',
-    'Surplus',
-    'Systems'
-  ];
+  codes: string[] = Object.keys(this.pc);
 
   //problem code
-  search = '';
+  search: string = '';
 
   //description
-  description = '';
+  description: string = this.getDescription(this.search);
 
   //filters problem codes based on search
-  filter() {
-    return this.codes.filter(c => c.toLowerCase().includes(this.search.toLowerCase()));
-  }
+  filter() { return this.codes.filter(c => c.toLowerCase().includes(this.search.toLowerCase())); }
 
   //bolds matching letters
-  bold(c) { return c.replace(new RegExp(this.search, 'gi'), '<b>' + '$&' + '</b>'); }
+  bold(c: string) { return c.replace(new RegExp(this.search,'gi'),'<b>' + '$&' + '</b>'); }
 
-  //sets category on click
-  onClick(category) { return this.search = category; }
+  //sets the selected category
+  onClick(category: string) : string { return this.search = category; }
 
+  //gets the corresponding description of the searched problem code
+  getDescription(codeKey: string) : string { return !this.search.length ? '' : this.pc[codeKey]; }
 }

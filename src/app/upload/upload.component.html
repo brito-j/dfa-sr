@@ -2,14 +2,16 @@
 <!-- 9.15.2018 -->
 
 <div class="page">
-  <h1>Step 1</h1>
+  <h1>Upload</h1>
   <!-- use form to process submission -->
   <form clrForm>
     <!-- hide container if no image is selected -->
     <!-- set image source to data url -->
-    <div *ngIf="getURL().length"><img [src]="getURL()" height="200"></div>
+    <div *ngIf="getURL().length"><img alt="Image of Problem" [src]="getURL()" height="200"></div>
     <div *ngIf="getURL().length"><br></div>
     <!-- process upload each time a new image is selected -->
     <input clrInput type='file' (change)="upload($event)">
   </form>
+  <br>
+  <div class="end-form"><button type="button" class="btn btn-outline-success btn-lg">Submit</button></div>
 </div>

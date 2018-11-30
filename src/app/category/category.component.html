@@ -2,13 +2,18 @@
 <!-- 10.28.2018 -->
 
 <div class="page">
-  <h1>Step 3</h1>
+  <h1>Categorize</h1>
+  <label>Problem Code</label>
+  <br>
+  <!--empty div for spacing-->
+  <div></div>
   <clr-dropdown [clrCloseMenuOnItemClick]="true">
     <label clrDropdownTrigger>
-      <h5>Problem Code</h5>
-      <input clrInput [(ngModel)]="search" />
+      <input clrInput class="input" type="text" [(ngModel)]="search" />
     </label>
-
+    <br>
+    <br>
+    <strong>{{pc[search]}}</strong>
     <clr-dropdown-menu *clrIfOpen>
       <div *ngFor="let category of filter()">
         <button type="button" clrDropdownItem (click)="onClick(category)">
@@ -18,8 +23,15 @@
     </clr-dropdown-menu>
   </clr-dropdown>
 
-  <h5>Description</h5>
+  <form clrForm *ngIf="search == 'EVENT'">
+    <input clrInput class="input" type='file'>
+  </form>
+
+  <br>
+  <br>
   <div class="clr-control-container">
-    <textarea clrTextarea title="description" [(ngModel)]="description"></textarea>
+    <label>Description</label>
+    <br>
+    <textarea clrTextarea class="textarea" title="description" [(ngModel)]="description"></textarea>
   </div>
 </div>

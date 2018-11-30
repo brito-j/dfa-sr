@@ -2,40 +2,40 @@
 <!-- 11/3/2018 -->
 
 <div class="page">
-  <h1>Step 4</h1>
-  <form clrForm>
+  <form clrForm class="form">
+    <h1>Identify</h1>
     <clr-input-container>
       <label>Request Date</label>
       <br>
-      <input type="date" clrDate>
+      <input class="input" type="date" clrDate>
     </clr-input-container>
   </form>
 
   <form clrForm>
     <label>Requestor Name</label>
     <br>
-    <input clrInput placeholder="First" name="first" [(ngModel)]="first"/>
-    &nbsp;
-    <input clrInput placeholder="Last" name="last" [(ngModel)]="last" />
+    <input clrInput class="input" type="text" placeholder="First" name="first" [(ngModel)]="first"/>
+    <br>
+    <input clrInput class="input" type="text" placeholder="Last" name="last" [(ngModel)]="last" />
   </form>
 
   <form clrForm>
     <label>VUNetID</label>
     <br>
-    <input clrInput placeholder="" name="id" [(ngModel)]="id" />
+    <input clrInput class="input" type="text" placeholder="" name="id" [(ngModel)]="id" />
   </form>
 
   <form clrForm>
     <label>Requestor Email</label>
     <br>
-    <input clrInput placeholder="" name="email" [(ngModel)]="email" />
+    <input clrInput class="input" type="text" placeholder="" name="email" [(ngModel)]="email" />
   </form>
 
   <form clrForm>
     <clr-input-container>
       <label>Requestor Phone Number</label>
       <br>
-      <input placeholder="" clrInput [(ngModel)]="phone1" name="phone1" required />
+      <input placeholder="" clrInput class="input" type="text" [(ngModel)]="phone1" name="phone1" required />
       <br>
       <clr-control-helper>###-###-####</clr-control-helper>
       <clr-control-error></clr-control-error>
@@ -45,36 +45,36 @@
   <form clrForm>
     <label>Requestor Home Dept Name</label>
     <br>
-    <input clrInput placeholder="" name="dept" [(ngModel)]="dept" />
+    <input clrInput class="input" type="text" placeholder="" name="dept" [(ngModel)]="dept" />
   </form>
 
   <form clrForm>
     <clr-input-container>
       <label>Date of Event</label>
       <br>
-      <input type="date" clrDate>
+      <input class="input" type="date" clrDate>
     </clr-input-container>
   </form>
 
   <form clrForm>
     <label>Alternate Contact</label>
     <br>
-    <input clrInput placeholder="First" name="altfirst" [(ngModel)]="altfirst"/>
-    &nbsp;
-    <input clrInput placeholder="Last" name="altlast" [(ngModel)]="altlast"/>
+    <input clrInput class="input" type="text" placeholder="First" name="altfirst" [(ngModel)]="altfirst"/>
+    <br>
+    <input clrInput class="input" type="text" placeholder="Last" name="altlast" [(ngModel)]="altlast"/>
   </form>
 
   <form clrForm>
     <label>Alternate Email</label>
     <br>
-    <input clrInput placeholder="" name="altemail" [(ngModel)]="altemail" />
+    <input clrInput class="input" type="text" placeholder="" name="altemail" [(ngModel)]="altemail" />
   </form>
 
   <form clrForm>
     <clr-input-container>
       <label>Alternate Phone Number</label>
       <br>
-      <input placeholder="" clrInput [(ngModel)]="alternatephone" name="alternatephone" required />
+      <input clrInput class="input" type="text" [(ngModel)]="alternatephone" name="alternatephone" required />
       <br>
       <clr-control-helper>###-###-####</clr-control-helper>
       <clr-control-error></clr-control-error>

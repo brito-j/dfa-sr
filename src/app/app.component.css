@@ -1,3 +1,10 @@
-.page {
-  padding-left: 1%;
+.page
+{
+  text-align: center;
+  background: #EEEEEE;
+}
+
+.page-content
+{
+  display: inline-block;
 }
