@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
 import { InformationComponent } from './information/information.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InformationComponent } from './information/information.component';
     LocationComponent,
     UploadComponent,
     CategoryComponent,
-    InformationComponent
+    InformationComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

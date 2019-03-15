@@ -7,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InformationComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   first;
   last;
   id;
@@ -23,5 +18,9 @@ export class InformationComponent implements OnInit {
   altemail;
   alternatephone;
 
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }

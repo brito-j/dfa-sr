@@ -20,33 +20,14 @@ locations. The list drops down when the search box is clicked.
     </clr-dropdown-menu>
   </clr-dropdown>
 
-  <br>
-  <br>
+  <form clrForm>
+    <clr-input-container>
+      <label>Floor</label>
+      <input clrInput class="input" type="text" size="5"/>
+      &nbsp;
+      <label>Room</label>
+      <input clrInput class="input" type="text" size="5"/>
+    </clr-input-container>
+  </form>
 
-  <clr-select-container>
-    <label>Floor</label>
-    &nbsp;
-    <select clrSelect class="sel" [(ngModel)]="floors">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </clr-select-container>
-
-  &nbsp;
-  &nbsp;
-
-  <clr-select-container>
-    <label>Room</label>
-    &nbsp;
-    <select clrSelect class="sel" [(ngModel)]="rooms">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </clr-select-container>
 </div>

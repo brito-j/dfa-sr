@@ -12,7 +12,6 @@
       <input clrInput class="input" type="text" [(ngModel)]="search" />
     </label>
     <br>
-    <br>
     <strong>{{pc[search]}}</strong>
     <clr-dropdown-menu *clrIfOpen>
       <div *ngFor="let category of filter()">
@@ -32,6 +31,6 @@
   <div class="clr-control-container">
     <label>Description</label>
     <br>
-    <textarea clrTextarea class="textarea" title="description" [(ngModel)]="description"></textarea>
+    <textarea clrTextarea class="textarea" cols="40" title="description" [(ngModel)]="description"></textarea>
   </div>
 </div>

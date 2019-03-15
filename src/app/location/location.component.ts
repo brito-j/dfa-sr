@@ -77,10 +77,10 @@ export class LocationComponent implements OnInit {
   search = '';
 
   // For floor select
-  floors = '';
+  // floors = '';
 
   // For room select
-  rooms = '';
+  // rooms = '';
 
   constructor() {}
 
