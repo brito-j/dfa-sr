@@ -1,0 +1,41 @@
+<!--
+Lays out a simple form for filling out the chart of account string.
+Some inputs cannot be changed.
+-->
+<div class="page">
+  <form clrForm>
+    <h1>Chart of Account String</h1>
+    <div class="form-group">
+      <label>Entity</label>
+      <input clrInput class="input" type="text" placeholder="XXX" [(ngModel)]="entity" size="5"/>
+    </div>
+    <div class="form-group">
+      <label>New Asset Class</label>
+      <input clrInput class="input" type="text" placeholder="05" size="5" readonly/>
+    </div>
+    <div class="form-group">
+      <label>Financial Unit</label>
+      <input clrInput class="input" type="text" placeholder="" [(ngModel)]="financial" size="5"/>
+    </div>
+    <div class="form-group">
+      <label>Account</label>
+      <input clrInput class="input" type="text" placeholder="6745" size="5" readonly/>
+    </div>
+    <div class="form-group">
+      <label>Program</label>
+      <input clrInput class="input" type="text" placeholder="" [(ngModel)]="program" size="5"/>
+    </div>
+    <div class="form-group">
+      <label>Activity</label>
+      <input clrInput class="input" type="text" placeholder="XXX" [(ngModel)]="activity" size="5"/>
+    </div>
+    <div class="form-group">
+      <label>InterEntity</label>
+      <input clrInput class="input" type="text" placeholder="XXX" [(ngModel)]="interEntity" size="5"/>
+    </div>
+    <div class="form-group">
+      <label>Future</label>
+      <input clrInput class="input" type="text" placeholder="0.0" size="5" readonly/>
+    </div>
+  </form>
+</div>

@@ -10,7 +10,7 @@
     <div *ngIf="getURL().length"><img alt="Image of Problem" [src]="getURL()" height="200"></div>
     <div *ngIf="getURL().length"><br></div>
     <!-- process upload each time a new image is selected -->
-    <input clrInput type='file' (change)="upload($event)">
+    <input type='file' (change)="upload($event)" multiple/>
   </form>
   <br>
   <div class="end-form"><button type="button" class="btn btn-outline-success btn-lg">Submit</button></div>

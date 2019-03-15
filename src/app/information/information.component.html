@@ -2,8 +2,8 @@
 <!-- 11/3/2018 -->
 
 <div class="page">
+  <h1>Identify</h1>
   <form clrForm class="form">
-    <h1>Identify</h1>
     <clr-input-container>
       <label>Request Date</label>
       <br>
@@ -12,11 +12,11 @@
   </form>
 
   <form clrForm>
-    <label>Requestor Name</label>
+    <label>Requester Name</label>
     <br>
-    <input clrInput class="input" type="text" placeholder="First" name="first" [(ngModel)]="first"/>
-    <br>
-    <input clrInput class="input" type="text" placeholder="Last" name="last" [(ngModel)]="last" />
+    <input clrInput class="input" type="text" placeholder="First" name="first" [(ngModel)]="first" size="10"/>
+    &nbsp;
+    <input clrInput class="input" type="text" placeholder="Last" name="last" [(ngModel)]="last" size="15"/>
   </form>
 
   <form clrForm>
@@ -26,14 +26,14 @@
   </form>
 
   <form clrForm>
-    <label>Requestor Email</label>
+    <label>Requester Email</label>
     <br>
     <input clrInput class="input" type="text" placeholder="" name="email" [(ngModel)]="email" />
   </form>
 
   <form clrForm>
     <clr-input-container>
-      <label>Requestor Phone Number</label>
+      <label>Requester Phone Number</label>
       <br>
       <input placeholder="" clrInput class="input" type="text" [(ngModel)]="phone1" name="phone1" required />
       <br>
@@ -43,7 +43,7 @@
   </form>
 
   <form clrForm>
-    <label>Requestor Home Dept Name</label>
+    <label>Requester Home Dept Name</label>
     <br>
     <input clrInput class="input" type="text" placeholder="" name="dept" [(ngModel)]="dept" />
   </form>
@@ -59,9 +59,9 @@
   <form clrForm>
     <label>Alternate Contact</label>
     <br>
-    <input clrInput class="input" type="text" placeholder="First" name="altfirst" [(ngModel)]="altfirst"/>
-    <br>
-    <input clrInput class="input" type="text" placeholder="Last" name="altlast" [(ngModel)]="altlast"/>
+    <input clrInput class="input" type="text" placeholder="First" name="altfirst" [(ngModel)]="altfirst" size="10"/>
+    &nbsp;
+    <input clrInput class="input" type="text" placeholder="Last" name="altlast" [(ngModel)]="altlast" size="15"/>
   </form>
 
   <form clrForm>
